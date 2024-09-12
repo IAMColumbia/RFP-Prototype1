@@ -5,6 +5,7 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     public float speed = 0.5f;
+    public float turnSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -17,5 +18,6 @@ public class NewBehaviourScript : MonoBehaviour
     {
         // Move the vehicle forward
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        transform.Translate(Vector3.right * Time.deltaTime * turnSpeed);
     }
 }
